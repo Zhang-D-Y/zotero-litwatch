@@ -120,7 +120,7 @@ LitWatch emphasizes human confirmation by default: you should always run a dry-r
 ### Windows PowerShell
 
 ```powershell
-git clone https://github.com/<your-username>/zotero-litwatch.git
+git clone https://github.com/Zhang-D-Y/zotero-litwatch.git
 cd zotero-litwatch
 
 irm https://astral.sh/uv/install.ps1 | iex
