@@ -1,0 +1,48 @@
+version: 1
+name: Your Topic Literature Watch
+description: >
+  Generic LitWatch query matrix template. Replace the placeholder queries,
+  tags, collection names, and inclusion reasons with your own research topic.
+
+defaults:
+  year_from: 2020
+  max_results: 25
+  source:
+    - openalex
+    - semantic_scholar
+    - arxiv
+    - crossref
+  root_collection: Your-Topic-LitWatch
+
+queries:
+  - query: '"your core keyword" AND "your research task"'
+    source: [openalex, semantic_scholar, arxiv, crossref]
+    year_from: 2020
+    max_results: 25
+    tags: [replace_me, core_topic]
+    target_subcollection: 01_core_papers
+    inclusion_reason: Replace with why this query is central to your topic.
+
+  - query: '"your method keyword" AND ("benchmark" OR "evaluation")'
+    source: [openalex, semantic_scholar, arxiv, crossref]
+    year_from: 2020
+    max_results: 25
+    tags: [replace_me, method, benchmark]
+    target_subcollection: 02_methods_and_benchmarks
+    inclusion_reason: Replace with why these papers support evaluation or baselines.
+
+  - query: '"your related work keyword" AND ("survey" OR "review")'
+    source: [openalex, semantic_scholar, arxiv, crossref]
+    year_from: 2018
+    max_results: 20
+    tags: [replace_me, related_work, survey]
+    target_subcollection: 03_surveys_and_background
+    inclusion_reason: Replace with why these papers are useful background.
+
+  - query: '"your application domain" AND ("limitations" OR "challenges" OR "open problems")'
+    source: [openalex, semantic_scholar, arxiv, crossref]
+    year_from: 2018
+    max_results: 20
+    tags: [replace_me, limitations, open_problems]
+    target_subcollection: 04_gaps_and_limitations
+    inclusion_reason: Replace with why these papers help identify research gaps.
