@@ -145,7 +145,7 @@ npm.cmd run dev
 ### Linux/macOS
 
 ```bash
-git clone https://github.com/<your-username>/zotero-litwatch.git
+git clone https://github.com/Zhang-D-Y/zotero-litwatch.git
 cd zotero-litwatch
 
 curl -LsSf https://astral.sh/uv/install.sh | sh
